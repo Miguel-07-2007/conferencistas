@@ -5,20 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conferencistas</title>
+    <style>
+        marquee {
+            color: rgb(221, 215, 215);
+            background-color: #c01220;
+        }
+
+        #tablaConferencistas{
+            width: 50%;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <marquee style="color: rgb(221, 215, 215); background-color: #c01220; padding: 9px;">
-  <STRong> tu mensaje </STRong> //forma de hacer un marquee//
-        <h1><strong>CONFERENCISTAS</strong>/Conoce a los expertos</h1>
-    </header>
+    <marquee behavior="scroll" direction="left" scrollamount="8">
+        <Strong> 
+            Si planeas tener una conferencia de alto nivel, no lo dudes ni un segundo más, este es tu lugar
+        </Strong>
+    </marquee>
 
-    <main>
+    <h1><strong>CONFERENCISTAS</strong>/Conoce a los expertos</h1>
+    <section id="tablaConferencistas">
         <table>
             <tr>
                 <td>
-                    <img src="images.jpeg" alt="Imagen del profesional Robert" width= "200px">
+                    <img src="images.jpeg" alt="Imagen del profesional Robert" width="200px">
                     <h3>Robert Gimenez</h3>
                     <h4>Director de Conferencias</h4>
                     <p>
@@ -27,7 +39,7 @@
                     </p>
                 </td>
                 <td>
-                    <img src="imagen2.jpeg" alt="Imagen del profecional Manuel" width= "200px">
+                    <img src="imagen2.jpeg" alt="Imagen del profecional Manuel" width="200px">
                     <h3>Robert Gimenez</h3>
                     <h4>Coordinador de Eventos</h4>
                     <p>
@@ -35,27 +47,28 @@
                         gestionar reuniones y conferencias corporativas.
                     </p>
                 </td>
-                                <td>
-                    <img src="images3.jpeg" alt="Imagen del profecional Manuel" width= "200px">
+                <td>
+                    <img src="images3.jpeg" alt="Imagen del profecional Manuel" width="200px">
                     <h3>Robert Gimenez</h3>
                     <h4>Especialista en Comunicación Corporativa</h4>
                     <p>
-                        Es un profesional elocuente, responsable de transmitir 
+                        Es un profesional elocuente, responsable de transmitir
                         mensajes institucionales y fortalecer relaciones empresariales.
                     </p>
                 </td>
                 <td>
-                    <img src="images4.jpeg" alt="Imagen del profecional Manuel" width= "200px">
+                    <img src="images4.jpeg" alt="Imagen del profecional Manuel" width="200px">
                     <h3>Robert Gimenez</h3>
                     <h4>Ponente Empresarial</h4>
                     <p>
-                        Es un experto en su área, destacado por compartir 
+                        Es un experto en su área, destacado por compartir
                         conocimientos y motivar equipos profesionales.
                     </p>
                 </td>
             </tr>
         </table>
-    </main>
+     </section>
+   
 </body>
 
 </html>
