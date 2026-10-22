@@ -5,70 +5,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conferencistas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         marquee {
             color: rgb(221, 215, 215);
             background-color: #c01220;
         }
 
-        #tablaConferencistas{
-            width: 50%;
+        #conferencistas {
+            width: 80%;
             text-align: center;
+            margin: 30px auto;
+        }
+
+        .contenedor-perfiles {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .perfil {
+            box-sizing: border-box;
+            height: 500px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 12px;
+            background-color: rgba(221, 215, 215, 0.456);
+        }
+
+        .imagen-perfil {
+            width: 180px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+            clip-path: polygon(50% 0%,
+                    100% 25%,
+                    100% 75%,
+                    50% 100%,
+                    0% 75%,
+                    0% 25%);
+        }
+
+        .redes-sociales {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .enlace_facebook,
+        .enlace_x,
+        .enlace_github,
+        .enlace_linkedin,
+        .enlace_ig {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            background-color: #222222;
+            color: white;
+        }
+
+        .enlace_facebook:hover,
+        .enlace_x:hover,
+        .enlace_github:hover,
+        .enlace_linkedin:hover,
+        .enlace_ig:hover {
+            transform: translateY(-3px);
+            opacity: 0.85;
+        }
+
+        .boton_mas_info {
+            display: inline-block;
+            padding: 12px 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            text-decoration: none;
+            background-color: #c01220;
+            color: white;
+        }
+
+        .boton_mas_info:hover {
+            transform: translateY(-3px);
+            background-color: #222222;
+
         }
     </style>
 </head>
 
 <body>
     <marquee behavior="scroll" direction="left" scrollamount="8">
-        <Strong> 
+        <Strong>
             Si planeas tener una conferencia de alto nivel, no lo dudes ni un segundo más, este es tu lugar
         </Strong>
     </marquee>
 
     <h1><strong>CONFERENCISTAS</strong>/Conoce a los expertos</h1>
-    <section id="tablaConferencistas">
-        <table>
-            <tr>
-                <td>
-                    <img src="images.jpeg" alt="Imagen del profesional Robert" width="200px">
-                    <h3>Robert Gimenez</h3>
-                    <h4>Director de Conferencias</h4>
-                    <p>
-                        Es un líder estratégico, reconocido por organizar
-                        eventos empresariales y coordinar equipos profesionales.
-                    </p>
-                </td>
-                <td>
-                    <img src="imagen2.jpeg" alt="Imagen del profecional Manuel" width="200px">
-                    <h3>Robert Gimenez</h3>
-                    <h4>Coordinador de Eventos</h4>
-                    <p>
-                        Es una persona organizada, creativa y eficiente, capaz de
-                        gestionar reuniones y conferencias corporativas.
-                    </p>
-                </td>
-                <td>
-                    <img src="images3.jpeg" alt="Imagen del profecional Manuel" width="200px">
-                    <h3>Robert Gimenez</h3>
-                    <h4>Especialista en Comunicación Corporativa</h4>
-                    <p>
-                        Es un profesional elocuente, responsable de transmitir
-                        mensajes institucionales y fortalecer relaciones empresariales.
-                    </p>
-                </td>
-                <td>
-                    <img src="images4.jpeg" alt="Imagen del profecional Manuel" width="200px">
-                    <h3>Robert Gimenez</h3>
-                    <h4>Ponente Empresarial</h4>
-                    <p>
-                        Es un experto en su área, destacado por compartir
-                        conocimientos y motivar equipos profesionales.
-                    </p>
-                </td>
-            </tr>
-        </table>
-     </section>
-   
+    <section id="conferencistas">
+        <div class="contenedor-perfiles">
+            <article class="perfil">
+                <img src="images.jpeg" alt="Imagen del profesional Robert" width="200px" class="imagen-perfil">
+                <h3>Robert Gimenez</h3>
+                <h4 style="color: #c01220;">Director de Conferencias</h4>
+                <p>
+                    Es un líder estratégico, reconocido por organizar
+                    eventos empresariales y coordinar equipos profesionales.
+                </p>
+
+                <div class="redes-sociales">
+
+                    <a href="https://www.facebook.com/" class="enlace_facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/" class="enlace_x">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://github.com/" class="enlace_github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="enlace_linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="enlace_ig">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="perfil">
+                <img src="imagen2.jpeg" alt="Imagen del profecional Manuel" width="200px" class="imagen-perfil">
+                <h3>Carlos Berrio</h3>
+                <h4 style="color: #c01220;">Coordinador de Eventos</h4>
+                <p>
+                    Es una persona organizada, creativa y eficiente, capaz de
+                    gestionar reuniones y conferencias corporativas.
+                </p>
+                <div class="redes-sociales">
+
+                    <a href="https://www.facebook.com/" class="enlace_facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/" class="enlace_x">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://github.com/" class="enlace_github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="enlace_linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="enlace_ig">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="perfil">
+                <img src="images3.jpeg" alt="Imagen del profecional Manuel" width="200px" class="imagen-perfil">
+                <h3>Gustavo Gomez</h3>
+                <h4 style="color:#c01220;">Especialista en Comunicación Corporativa</h4>
+                <p>
+                    Es un profesional elocuente, responsable de transmitir
+                    mensajes institucionales y fortalecer relaciones empresariales.
+                </p>
+                <div class="redes-sociales">
+
+                    <a href="https://www.facebook.com/" class="enlace_facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/" class="enlace_x">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://github.com/" class="enlace_github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="enlace_linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="enlace_ig">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="perfil">
+
+                <img src="images4.jpeg" alt="Imagen del profecional Manuel" width="200px" class="imagen-perfil">
+                <h3>Lucía Guevara</h3>
+                <h4 style="color: #c01220;">Ponente Empresarial</h4>
+                <p>
+                    Es un experto en su área, destacado por compartir
+                    conocimientos y motivar equipos profesionales.
+                </p>
+                <div class="redes-sociales">
+
+                    <a href="https://www.facebook.com/" class="enlace_facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://x.com/" class="enlace_x">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://github.com/" class="enlace_github">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="enlace_linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="enlace_ig">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+        <a class="boton_mas_info" href="mas_info.html">Mas información</a>
+    </section>
 </body>
 
 </html>
